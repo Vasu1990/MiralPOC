@@ -1,0 +1,45 @@
+   <div classNames="product col-lg-4 col-md-6">
+                                        <div classNames="product-thumb">
+                                            <a href="#" classNames="thumb-link">
+                                                <img classNames="hover-img" src="assets/img/product/6-hover.jpg" alt="Product Hover" />
+                                                <img classNames="front-img" src="assets/img/product/6.jpg" alt="Product Front" />
+                                            </a>
+                                            <div classNames="attr-group">
+                                                <span classNames="new">New</span>
+                                            </div>
+                                            <a classNames="to-cart" href="#"><i classNames="fa fa-shopping-cart"></i> Add To Cart</a>
+                                            <div classNames="product-btn">
+                                                <a classNames="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i classNames="fa fa-eye"></i><span classNames="tooltip">Quick View</span></a>
+                                                <a classNames="to-compare" href="#"><i classNames="fa fa-plus"></i><span classNames="tooltip">Add To Compare</span></a>
+                                                <a classNames="to-wish" href="#"><i classNames="fa fa-heart"></i><span classNames="tooltip">Add To Wishlist</span></a>
+                                            </div>
+                                        </div>
+                                        <div classNames="product-info">
+                                            <h5 classNames="product-name"><a href="#">Funnky hight</a></h5>
+                                            <div classNames="rating" itemtype="http://schema.org/Offer" itemscope="">
+                                                <div classNames="star_rating" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+                                                    <span classNames="star star_full"></span>
+                                                    <span classNames="star star_full"></span>
+                                                    <span classNames="star star_full"></span>
+                                                    <span classNames="star star_full"></span>
+                                                    <span classNames="star"></span>
+                                                    <meta itemprop="worstRating" content="0">
+                                                    <meta itemprop="ratingValue" content="4">
+                                                    <meta itemprop="bestRating" content="5">
+                                                </div>
+                                            </div>
+                                            <p classNames="price">$12.00</p>
+                                            <div classNames="product-description">
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
+                                                <a href="product-single.html" classNames="product-desc-link">Learn More</a>
+                                            </div>
+                                            <div classNames="list_mode_btns">
+                                                <a classNames="to-cart" href="#"><i classNames="fa fa-shopping-cart"></i> Add To Cart</a>
+                                                <div classNames="product-btn">
+                                                    <a classNames="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i classNames="fa fa-eye"></i><span classNames="tooltip">Quick View</span></a>
+                                                    <a classNames="to-compare" href="#"><i classNames="fa fa-plus"></i><span classNames="tooltip">Add To Compare</span></a>
+                                                    <a classNames="to-wish" href="#"><i classNames="fa fa-heart"></i><span classNames="tooltip">Add To Wishlist</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
