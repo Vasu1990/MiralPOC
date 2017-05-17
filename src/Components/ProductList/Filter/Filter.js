@@ -215,8 +215,7 @@ class Filter extends Component {
                                                     </div>
                                                 </div>
                                                 <p className="price">
-                                                    <span className="discount-price">$60.80</span>
-                                                    <span className="regular-price">$80.99</span>
+                                                 
                                                 </p>
                                             </div>
                                         </div>

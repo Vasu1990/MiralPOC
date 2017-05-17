@@ -122,9 +122,9 @@ class List extends Component {
 
      for(let index = 0 ;index < total ;index++) {
         if(index < rating) {
-          starRating.push(<span className="star star_full"></span>);
+          starRating.push(<span className="star star_full" key={index}></span>);
         } else{
-          starRating.push(<span className="star"></span>);
+          starRating.push(<span className="star" key={index}></span>);
         }
       }
     
