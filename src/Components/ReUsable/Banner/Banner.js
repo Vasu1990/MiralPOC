@@ -9,9 +9,9 @@ class Banner extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="page-header product-page-header">
-                            <h1 className="page-title">Products</h1>
+                            <h1 className="page-title">{this.props.pageTitle}</h1>
                             <div className="breadcrumbs">
-                                <div className="breadcrumb-item"><a href="home-1.html">Home</a></div><i className="fa fa-chevron-right"></i><div className="breadcrumb-item current">Products</div>
+                                <div className="breadcrumb-item"><a href="home-1.html">Home</a></div><i className="fa fa-chevron-right"></i><div className="breadcrumb-item current">{this.props.pageTitle}</div>
                             </div>
                         </div>
                     </div>

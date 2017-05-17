@@ -12,6 +12,7 @@ import Footer from './Components/Layout/Footer/Footer.js'
 
 import ProductListContainer from './Containers/ProductListContainer/ProductListContainer.js'
 import HomeContainer from './Containers/HomeContainer/HomeContainer.js'
+import CheckoutContainer from './Containers/CheckoutContainer/CheckoutContainer.js'
 
 var app = document.getElementById('root');
 ReactDOM.render(
@@ -21,7 +22,7 @@ ReactDOM.render(
 		   
 		   <Route exact path="/" component={HomeContainer}/>
        	   <Route path="/product-list" component={ProductListContainer}/>
-
+			<Route path="/checkout" component={CheckoutContainer}/>
 		   <Footer/>
 
            

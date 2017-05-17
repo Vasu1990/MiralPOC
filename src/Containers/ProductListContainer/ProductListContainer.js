@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import ListWrapper from '../../Components/ProductList/List/ListWrapper.js';
-import Banner from '../../Components/ProductList/Banner/Banner.js';
+import Banner from '../../Components/ReUsable/Banner/Banner.js';
 
 
 class ProductListContainer extends Component {
@@ -14,6 +14,7 @@ class ProductListContainer extends Component {
 			productData : [] ,
 			productListLoaded  : false
 		}
+		this.title = "Products";
 		this.getProductListData();
 	}
 
@@ -33,7 +34,7 @@ class ProductListContainer extends Component {
   render() {
     return (
          <div className="page product-page">
-         		 <Banner/>
+         		 <Banner  pageTitle={this.title}/>
          		 <ListWrapper productListData={this.state.productData} listLoaded={this.state.productListLoaded}/> 
      	 </div>
 	    );

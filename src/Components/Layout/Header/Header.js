@@ -143,47 +143,7 @@ class Header extends Component {
                                             <Link to="/product-list">Products</Link>
                                         </li>
                                         <li className="dropdown mega-holder">
-                                            <a href="products.html" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mirror</a>
-                                            <ul className="dropdown-menu mega-menu col-md-6 col-sm-8">
-                                                <li className="menu-row">
-                                                    <ul className="menu-column md-1-3">
-                                                        <li className="menu-title">
-                                                            <a href="products.html">Mirror 1</a>
-                                                            <ul className="menu-items" >
-                                                                <li className="menu-item"><a href="products.html">Coats &amp; Jackets</a></li>
-                                                                <li className="menu-item"><a href="products.html">Blazers</a></li>
-                                                                <li className="menu-item"><a href="products.html">Jackets</a></li>
-                                                                <li className="menu-item"><a href="products.html">Raincoats</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                    <ul className="menu-column md-1-3">
-                                                        <li className="menu-title">
-                                                            <a href="products.html">Mirror 2</a>
-                                                            <ul className="menu-items" >
-                                                                <li className="menu-item"><a href="products.html">Ankne Books</a></li>
-                                                                <li className="menu-item"><a href="products.html">Footwear</a></li>
-                                                                <li className="menu-item"><a href="products.html">Clog Sandals</a></li>
-                                                                <li className="menu-item"><a href="products.html">Combat Boots</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                    <ul className="menu-column md-1-3">
-                                                        <li className="menu-title">
-                                                            <a href="products.html">Mirror 3</a>
-                                                            <ul className="menu-items" >
-                                                                <li className="menu-item"><a href="products.html">Bootees Bags</a></li>
-                                                                <li className="menu-item"><a href="products.html">Briefs</a></li>
-                                                                <li className="menu-item"><a href="products.html">Nightwear</a></li>
-                                                                <li className="menu-item"><a href="products.html">Shapewear</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li className="menu-row">
-                                                    <a className="menu-banner" href="products.html"><img src="assets/img/menu/mirror.png" alt="..."/></a>
-                                                </li>
-                                            </ul>
+                                            <Link to="/checkout">Checkout</Link>
                                         </li>
                                         <li className="dropdown mega-holder">
                                             <a href="products.html" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lights</a>
