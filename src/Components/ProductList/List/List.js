@@ -118,22 +118,15 @@ class List extends Component {
   }
 
   renderRating(rating) {
-    let starRating = [];
-    let total = 5;
-    let emptyStars = total - rating;
+    let starRating = [] , total = 5;
 
-    
-    if(emptyStars >= 0) {
-      for(let index = 0 ;index < rating ;index++) {
-        starRating.push(<span className="star star_full"></span>);
+     for(let index = 0 ;index < total ;index++) {
+        if(index < rating) {
+          starRating.push(<span className="star star_full"></span>);
+        } else{
+          starRating.push(<span className="star"></span>);
+        }
       }
-      for(let index = 0 ;index < emptyStars ;index++) {
-        starRating.push(<span className="star"></span>);
-      }
-    }else {
-      starRating.push(<span className="star star_full"></span>);
-    }
-   
     
     return(
       <div className="rating" itemType="http://schema.org/Offer" itemScope="">

@@ -724,7 +724,10 @@ Header
 }
 .site-logo-link {
     display: inline-block;
-    margin: 21px 0;
+    margin: 5px 0;
+}
+.site-logo-link img {
+    height: 130px;
 }
 .searchform{
     position: relative;

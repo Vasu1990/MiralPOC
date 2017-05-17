@@ -25,7 +25,7 @@ class Footer extends Component {
                 <div className="footer-head">
                     <div className="display-flex">
                         <div className="col-md-4 col-sm-5">
-                            <a className="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo-white.png" alt="logo-white"/> </a>
+                            <a className="site-logo footer-logo" href="#"><img src="assets/img/color-1/template/logo.png" alt="logo-white"/> </a>
                         </div>
                         <div className="col-md-8 col-sm-7">
                             <ul className="socials">
