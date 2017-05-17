@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import List from '../../Components/ProductList/List/List.js';
+import ListWrapper from '../../Components/ProductList/List/ListWrapper.js';
 import Banner from '../../Components/ProductList/Banner/Banner.js';
 
 
@@ -34,9 +34,7 @@ class ProductListContainer extends Component {
     return (
          <div className="page product-page">
          		 <Banner/>
-         		 
-         		 {  this.state.productListLoaded ? <List productListData={this.state.productData}/> : <h1>Fetching Products...</h1> } 
-         		 
+         		 <ListWrapper productListData={this.state.productData} listLoaded={this.state.productListLoaded}/> 
      	 </div>
 	    );
 	  }
