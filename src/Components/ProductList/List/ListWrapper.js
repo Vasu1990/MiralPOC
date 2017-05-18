@@ -1,7 +1,23 @@
+// var EventEmitter = {
+//     _events: {},
+//     dispatch: function (event, data) {
+//         if (!this._events[event]) return; // no one is listening to this event
+//         for (var i = 0; i < this._events[event].length; i++)
+//             this._events[event][i](data);
+//     },
+//     subscribe: function (event, callback) {
+//       if (!this._events[event]) this._events[event] = []; // new event
+//       this._events[event].push(callback);
+//     }
+//     // note that we do not handle unsubscribe here
+// }
+
+
 import React, { Component } from 'react';
 import Filter from '../Filter/Filter.js'
 import Description from './Description.js'
 import List from './List.js'
+import Tile from './Tile.js'
 
 class ListWrapper extends Component {
 
@@ -50,44 +66,7 @@ class ListWrapper extends Component {
   renderProductTile(value , i) {
     console.log(value.id , "key");
     return ( 
-        <div className="product col-lg-4 col-md-6" key={value.id}>
-                            <div className="product-thumb">
-                                <a href="#" className="thumb-link">
-                                    <img className="hover-img" src={value.imgUrl} alt="Product Hover" />
-                                    <img className="front-img" src={value.hoverImgUrl} alt="Product Front" />
-                                </a>
-
-                                {this.renderNewTag(value.isNew)}
-                               
-                                <a className="to-cart" href="#"><i className="fa fa-shopping-cart"></i> Add To Cart</a>
-                                <div className="product-btn">
-                                    <a className="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i className="fa fa-eye"></i><span className="tooltip">Quick View</span></a>
-                                    <a className="to-compare" href="#"><i className="fa fa-plus"></i><span className="tooltip">Add To Compare</span></a>
-                                    <a className="to-wish" href="#"><i className="fa fa-heart"></i><span className="tooltip">Add To Wishlist</span></a>
-                                </div>
-                            </div>
-                            <div className="product-info" >
-                                <h5 className="product-name"><a href="#">{value.name}</a></h5>
-                                
-                                {this.renderRating(value.rating)}
-
-                                <p className="price">{value.price}</p>
-                                <div className="product-description">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
-                                    <a href="product-single.html" className="product-desc-link">Learn More</a>
-                                </div>
-                                <div className="list_mode_btns">
-                                    <a className="to-cart" href="#"><i className="fa fa-shopping-cart"></i> Add To Cart</a>
-                                    <div className="product-btn">
-                                        <a className="to-view" data-fancybox-type="iframe" href="product-quick-view.html"><i className="fa fa-eye"></i><span className="tooltip">Quick View</span></a>
-                                        <a className="to-compare" href="#"><i className="fa fa-plus"></i><span className="tooltip">Add To Compare</span></a>
-                                        <a className="to-wish" href="#"><i className="fa fa-heart"></i><span className="tooltip">Add To Wishlist</span></a>
-                                    </div>
-                                </div>
-                            </div>
-        </div>
-      
-
+      <Tile key={value.id} removeFromCartHandler={this.props.removeFromCartHandler}  addToCartHandler={this.props.addToCartHandler} productDetail={value} renderNewTag={this.renderNewTag} renderRating={this.renderRating}/>
     );
   }
 

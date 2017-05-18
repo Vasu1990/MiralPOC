@@ -8,7 +8,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/1",
 				"price" : "$12.00" ,
-				"rating" : 4
+				"rating" : 4 ,
+				"isAddedToCart" : true
 			} ,
 				{
 				"id": 2,
@@ -19,7 +20,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/2",
 				"price" : "$12.00" ,
-				"rating" : 4
+				"rating" : 4 ,
+				"isAddedToCart" : false
 			},
 				{
 					"id": 3,
@@ -30,7 +32,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/3",
 				"price" : "$12.00" ,
-				"rating" : 4
+				"rating" : 4 ,
+				"isAddedToCart" : false
 			},
 				{
 					"id": 4,
@@ -41,7 +44,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/4",
 				"price" : "$12.00" ,
-				"rating" : 3
+				"rating" : 3 ,
+				"isAddedToCart" : false
 			},
 				{
 					"id": 5,
@@ -52,7 +56,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/5",
 				"price" : "$12.00" ,
-				"rating" : 2
+				"rating" : 2 ,
+				"isAddedToCart" : false
 			},	{
 				"id": 6,
 				"description": "loremip sum" ,
@@ -62,7 +67,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/6",
 				"price" : "$12.00" ,
-				"rating" : 4
+				"rating" : 4 ,
+				"isAddedToCart" : false
 			}
 			,	{
 				"id": 7,
@@ -73,7 +79,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/7",
 				"price" : "$12.00" ,
-				"rating" : 4
+				"rating" : 4 ,
+				"isAddedToCart" : false
 			},	{
 				"id": 8,
 				"description": "loremip sum" ,
@@ -83,7 +90,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/8",
 				"price" : "$12.00" ,
-				"rating" : 1
+				"rating" : 1 ,
+				"isAddedToCart" : false
 			},
 				{
 					"id": 9,
@@ -94,7 +102,8 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/9",
 				"price" : "$12.00" ,
-				"rating" : 5
+				"rating" : 5 ,
+				"isAddedToCart" : false
 			},
 				{
 					"id": 10,
@@ -105,6 +114,7 @@
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/10",
 				"price" : "$12.00",
-				"rating" : 0	
+				"rating" : 0,
+				"isAddedToCart" : false
 			}]
 		}
