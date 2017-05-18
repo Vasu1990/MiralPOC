@@ -7,9 +7,10 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/1",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 4 ,
-				"isAddedToCart" : true
+				"isAddedToCart" : false ,
+				"shipping" : 4
 			} ,
 				{
 				"id": 2,
@@ -19,9 +20,10 @@
 				"isNew" : false ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/2",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 4 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"shipping" : 4
 			},
 				{
 					"id": 3,
@@ -31,9 +33,10 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/3",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 4 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"shipping" : 4
 			},
 				{
 					"id": 4,
@@ -43,9 +46,10 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/4",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 3 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"shipping" : 4
 			},
 				{
 					"id": 5,
@@ -55,7 +59,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/5",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 2 ,
 				"isAddedToCart" : false
 			},	{
@@ -66,7 +70,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/6",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 4 ,
 				"isAddedToCart" : false
 			}
@@ -78,7 +82,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/7",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 4 ,
 				"isAddedToCart" : false
 			},	{
@@ -89,7 +93,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/8",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 1 ,
 				"isAddedToCart" : false
 			},
@@ -101,7 +105,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/9",
-				"price" : "$12.00" ,
+				"price" : "12" ,
 				"rating" : 5 ,
 				"isAddedToCart" : false
 			},
@@ -113,7 +117,7 @@
 				"isNew" : true ,
 				"name" : "Funnky hight" ,
 				"nameUrl" : "product-detail/10",
-				"price" : "$12.00",
+				"price" : "12",
 				"rating" : 0,
 				"isAddedToCart" : false
 			}]

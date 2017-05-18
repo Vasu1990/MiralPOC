@@ -2764,3 +2764,6 @@ Single Blog Page
     text-align:center;
     padding: 0  40px 40px;
 }
+.checkout-page  .cart-thumb img{
+    width: 120px;
+}

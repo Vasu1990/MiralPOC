@@ -15,9 +15,12 @@ class ProductListContainer extends Component {
 			productListLoaded  : false
 		}
 		this.title = "Products";
-		this.getProductListData();
 		this.cartProducts = [];
 	}
+
+ componentWillMount() {
+		this.getProductListData();
+  }
 
   getProductListData() {
     return axios.get("./data/product-list.json")
@@ -52,7 +55,7 @@ class ProductListContainer extends Component {
   		}
   	})
   	this.setState({productData : newProductData});
-  	var eleIndex = this.cartProducts.indexOf(product)
+  	var eleIndex = this.cartProducts.indexOf(product);
   	this.cartProducts.splice(eleIndex, 1);
   	window.localStorage.setItem('cartProducts' , JSON.stringify(this.cartProducts) );
   }
