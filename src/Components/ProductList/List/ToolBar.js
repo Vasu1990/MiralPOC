@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-
-
-class Toolbar extends Component {
-	render () {
-	 	return (
+const Toolbar =()=> {
+	return (
 	 		<div className="toolbar">
                                 <div className="row">
                                     <div className="col-lg-3 col-md-4 col-sm-8">
@@ -63,9 +59,7 @@ class Toolbar extends Component {
                                     
                                 </div>
                             </div>
-	 	);
-
-	 }
-}
+    )
+};
 
 export default Toolbar

@@ -16,14 +16,14 @@ class ProductListContainer extends Component {
   	event.preventDefault();
     this.props.dispatch(addToList(product.id));
     this.props.dispatch(addToCart(product));
-  }
+  };
 
    removeFromCart = (product , event) => {
     event.preventDefault();
     this.props.dispatch(removeToList(product.id));
     this.props.dispatch(removeFromCart(product.id));
   	
-  }
+  };
 
   componentWillMount() {
     if(!this.props.productListLoaded) {
@@ -48,7 +48,7 @@ class ProductListContainer extends Component {
         productData: state.productList.updateProductInList,
         productListLoaded: state.productList.productListLoaded
     };
-  }
+  };
 
 
 export default connect(mapStateToProps)(ProductListContainer);
