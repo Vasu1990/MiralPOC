@@ -2,28 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ListWrapper from '../../Components/ProductList/List/ListWrapper.js';
 import Banner from '../../Components/ReUsable/Banner/Banner.js';
-import {load,addToList,removeToList} from '../../actions/productlistactions';
+import {load,addToList,removeFromList} from '../../actions/productlistactions';
 import {addToCart,removeFromCart} from '../../actions/checkoutactions';
 
 
-
-
 class ProductListContainer extends Component {
-
-	
 
   addToCart = (product , event) => {
   	event.preventDefault();
     this.props.dispatch(addToList(product.id));
     this.props.dispatch(addToCart(product));
-  }
+  };
 
-   removeFromCart = (product , event) => {
+   removeFromCart = (productId , event) => {
     event.preventDefault();
-    this.props.dispatch(removeToList(product.id));
-    this.props.dispatch(removeFromCart(product.id));
+    this.props.dispatch(removeFromList(productId));
+    this.props.dispatch(removeFromCart(productId));
   	
-  }
+  };
 
   componentWillMount() {
     if(!this.props.productListLoaded) {
@@ -48,7 +44,7 @@ class ProductListContainer extends Component {
         productData: state.productList.updateProductInList,
         productListLoaded: state.productList.productListLoaded
     };
-  }
+  };
 
 
 export default connect(mapStateToProps)(ProductListContainer);

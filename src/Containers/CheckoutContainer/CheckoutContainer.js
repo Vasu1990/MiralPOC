@@ -42,7 +42,7 @@ class CheckoutContainer extends Component {
         </dl>);
     }
     
-  }
+  };
 
   renderCartRows = (cartProducts) => {
     return cartProducts.map((product ,index) => {
@@ -59,16 +59,16 @@ class CheckoutContainer extends Component {
                                
                                <span className="remove-link" onClick={(event) => this.removeProductFromCart(product ,event)}>
                                 <a href="#">
-                                   <i className="fa fa-times-circle" aria-hidden="true"></i>
+                                   <i className="fa fa-times-circle" aria-hidden="true"> </i>
                                 </a>
                               </span>
                   </dt>
         );
     });
-  }
+  };
 
   calculateTotal = (cartProducts , shippingAmnt) => {
-    var totalAmount = 0;
+    let totalAmount = 0;
     
     cartProducts.forEach(function(product) {
         totalAmount +=  parseInt(product.price);
@@ -76,17 +76,17 @@ class CheckoutContainer extends Component {
 
     totalAmount += shippingAmnt;
     return totalAmount;
-  }
+  };
 
   calculateShipping = (cartProducts) => {
-    var totalAmount = 0;
+    let totalAmount = 0;
     
     cartProducts.forEach(function(product) {
         totalAmount= totalAmount + parseInt(product.shipping ? product.shipping : 0);
     });
 
     return totalAmount;
-  }
+  };
 
   removeProductFromCart(product ,event) {
 
@@ -122,7 +122,7 @@ const mapStateToProps = (state) => {
      return {
         cartProducts: state.checkoutProductList.updateProductInCheckout
     };
-  }
+};
 
 
 export default connect(mapStateToProps)(CheckoutContainer);

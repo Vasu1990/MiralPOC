@@ -9,7 +9,7 @@ function updateProductInCheckout(checkoutProductList = [], action) {
       case ADD_TO_CART:
          return [
             ...checkoutProductList,action.payload
-         ]
+         ];
 
       case REMOVE_FROM_CART:
          checkoutProductList.forEach(function(product, index) {
@@ -19,7 +19,7 @@ function updateProductInCheckout(checkoutProductList = [], action) {
          });
          return [
             ...checkoutProductList
-         ]
+         ];
 			
       default:
       return [...checkoutProductList];

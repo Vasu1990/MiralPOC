@@ -23,7 +23,7 @@ class Tile extends Component {
                                
                                {
                                     this.product.isAddedToCart ? 
-                                        <a className="to-cart"  onClick={(event) => this.props.removeFromCartHandler(this.product ,event)} href="#"><i className="fa fa-shopping-cart"></i> Remove From Cart</a>
+                                        <a className="to-cart"  onClick={(event) => this.props.removeFromCartHandler(this.product.id ,event)} href="#"><i className="fa fa-shopping-cart"></i> Remove From Cart</a>
                                     : 
                                     <a className="to-cart" onClick={(event) => this.props.addToCartHandler(this.product ,event )}  href="#"><i className="fa fa-shopping-cart"></i> Add To Cart</a>
                                 }
@@ -39,7 +39,7 @@ class Tile extends Component {
                                 
                                 {this.props.renderRating(this.product.rating)}
 
-                                <p className="price">{this.product.currency + this.product.price}</p>
+                                <p className="price">$ {this.product.price}</p>
                                 <div className="product-description">
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
                                     <a href="product-single.html" className="product-desc-link">Learn More</a>

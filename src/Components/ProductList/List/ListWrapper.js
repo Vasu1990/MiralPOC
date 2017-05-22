@@ -93,7 +93,7 @@ class ListWrapper extends Component {
     
     return(
       <div className="rating" itemType="http://schema.org/Offer" itemScope="">
-          <div itemType="star_rating" itemType="http://schema.org/AggregateRating" itemScope="" itemProp="aggregateRating">
+          <div itemType="star_rating" itemScope="" itemProp="aggregateRating">
               {starRating}
           </div>
       </div>
