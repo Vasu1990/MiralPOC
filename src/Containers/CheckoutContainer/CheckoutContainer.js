@@ -1,41 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Banner from '../../Components/ReUsable/Banner/Banner.js';
-import axios from 'axios';
+import {removeFromCart} from '../../actions/checkoutactions';
+import {removeToList} from '../../actions/productlistactions';
 
 class CheckoutContainer extends Component {
 
-  constructor() {
-    super();
 
-    this.totalShippingAmount = 0;
-    this.totalAmount = 0;
-
-     this.state = {
-        cartProducts : [] ,
-        carProductsLoaded : false
-      }
-    this.title = "Checkout";
-  }
-
-  componentWillMount() {
-     this.fetchCartItems();
-  }
-
-
-  fetchCartItems() {
-    var resData = JSON.parse(window.localStorage.getItem('cartProducts')) || [];
-     this.totalShippingAmount = this.calculateShipping(resData);
-     this.totalAmount = this.calculateTotal(resData , this.totalShippingAmount);
-     this.setState({cartProducts : resData , carProductsLoaded : true});
-  }
 
  renderCart = () => {
-    if(this.state.cartProducts.length > 0 ) {
+    if(this.props.cartProducts.length > 0 ) {
             return(  
                     <div>
                             <dl className="cart-products">
                               {
-                                  this.renderCartRows(this.state.cartProducts)
+                                  this.renderCartRows(this.props.cartProducts)
                               }
                                 
                              </dl>
@@ -111,34 +90,26 @@ class CheckoutContainer extends Component {
 
   removeProductFromCart(product ,event) {
 
-    this.state.cartProducts.indexOf(product);
     event.preventDefault();
-    var newCartData = [...this.state.cartProducts];
 
-    var eleIndex = newCartData.indexOf(product);
-    newCartData.splice(eleIndex, 1);
+    this.props.dispatch(removeFromCart(product.id));
+    this.props.dispatch(removeToList(product.id));
 
-    this.totalShippingAmount = this.calculateShipping(newCartData);
-    this.totalAmount = this.calculateTotal(newCartData , this.totalShippingAmount );
-
-    this.setState({cartProducts : newCartData});
-
-    window.localStorage.setItem('cartProducts' , JSON.stringify(newCartData) );
+ 
   }
 
 
   render() {
+    this.title = 'CHECKOUT';
+    this.totalShippingAmount = this.calculateShipping(this.props.cartProducts);
+    this.totalAmount = this.calculateTotal(this.props.cartProducts , this.totalShippingAmount);
       return ( 
         <div className="page checkout-page">
             <div className="container">
               <div className="row">              
                   <div className="col-sm-12">
                   <Banner pageTitle={this.title} />
-                   {this.state.carProductsLoaded ? 
-                       this.renderCart()
-                   :    
-                        <h1> fetching cart items</h1>
-                    }
+                       {this.renderCart()}
                     </div>
               </div>
             </div>
@@ -147,4 +118,13 @@ class CheckoutContainer extends Component {
   }
 }
 
-export default CheckoutContainer;
+const mapStateToProps = (state) => {
+     return {
+        cartProducts: state.checkoutProductList.updateProductInCheckout
+    };
+  }
+
+
+export default connect(mapStateToProps)(CheckoutContainer);
+
+

@@ -1,74 +1,54 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
+import { connect } from 'react-redux';
 import ListWrapper from '../../Components/ProductList/List/ListWrapper.js';
 import Banner from '../../Components/ReUsable/Banner/Banner.js';
+import {load,addToList,removeToList} from '../../actions/productlistactions';
+import {addToCart,removeFromCart} from '../../actions/checkoutactions';
+
+
 
 
 class ProductListContainer extends Component {
 
-	constructor() {
-	super();
 	
-		this.state = {
-			productData : [] ,
-			productListLoaded  : false
-		}
-		this.title = "Products";
-		this.cartProducts = [];
-	}
-
- componentWillMount() {
-		this.getProductListData();
-  }
-
-  getProductListData() {
-    return axios.get("./data/product-list.json")
-      .then(res => {
-      	console.log(res.data.productList);
-      	let productData = res.data.productList
-        this.setState({productData : productData  , productListLoaded : true});
-      });
-  }
 
   addToCart = (product , event) => {
-  	console.log(product);
   	event.preventDefault();
-  	var newProductData = [...this.state.productData];
-  	newProductData.forEach(function(element){
-  		if(element.id === product.id) {
-  			element.isAddedToCart = true;
-  		}
-  	})
-  	this.setState({productData : newProductData});
-  	this.cartProducts.push(product);
-  	window.localStorage.setItem('cartProducts' , JSON.stringify(this.cartProducts) );
+    this.props.dispatch(addToList(product.id));
+    this.props.dispatch(addToCart(product));
   }
 
    removeFromCart = (product , event) => {
-  	console.log(product);
-  	event.preventDefault();
-  	var newProductData = [...this.state.productData];
-  	newProductData.forEach(function(element){
-  		if(element.id === product.id) {
-  			element.isAddedToCart = false;
-  		}
-  	})
-  	this.setState({productData : newProductData});
-  	var eleIndex = this.cartProducts.indexOf(product);
-  	this.cartProducts.splice(eleIndex, 1);
-  	window.localStorage.setItem('cartProducts' , JSON.stringify(this.cartProducts) );
+    event.preventDefault();
+    this.props.dispatch(removeToList(product.id));
+    this.props.dispatch(removeFromCart(product.id));
+  	
+  }
+
+  componentWillMount() {
+    if(!this.props.productListLoaded) {
+      this.props.dispatch(load());
+    }
   }
 
 
   render() {
+   
     return (
          <div className="page product-page">
          		 <Banner  pageTitle={this.title}/>
-         		 <ListWrapper removeFromCartHandler={this.removeFromCart.bind(this)} addToCartHandler={this.addToCart.bind(this)}  productListData={this.state.productData} listLoaded={this.state.productListLoaded}/> 
+         		 <ListWrapper removeFromCartHandler={this.removeFromCart.bind(this)} addToCartHandler={this.addToCart.bind(this)}  productListData={this.props.productData} listLoaded={this.props.productListLoaded}/> 
      	 </div>
 	    );
 	  }
 	}	
 
-export default ProductListContainer;
+  const mapStateToProps = (state) => {
+     return {
+        productData: state.productList.updateProductInList,
+        productListLoaded: state.productList.productListLoaded
+    };
+  }
+
+
+export default connect(mapStateToProps)(ProductListContainer);
