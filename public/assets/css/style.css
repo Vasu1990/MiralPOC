@@ -2771,3 +2771,8 @@ Single Blog Page
 .on-minicart .cart-thumb {
     width: 130px;
 }
+
+.on-minicart .empty-cart {
+    font-size: 20px;
+    padding: 0;
+}

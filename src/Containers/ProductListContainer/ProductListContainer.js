@@ -29,7 +29,7 @@ class ProductListContainer extends Component {
 
 
   render() {
-   
+   this.title = "Products";
     return (
          <div className="page product-page">
          		 <Banner  pageTitle={this.title}/>
