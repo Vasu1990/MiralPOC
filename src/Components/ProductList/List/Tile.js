@@ -35,7 +35,7 @@ class Tile extends Component {
                                 </div>
                             </div>
                             <div className="product-info" >
-                                <h5 className="product-name"><a href="#">{this.product.name}</a></h5>
+                                <h5 className="product-name"><a href="#">{this.product.name}- {this.product.manufacturer}</a></h5>
                                 
                                 {this.props.renderRating(this.product.rating)}
 

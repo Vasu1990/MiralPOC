@@ -10,7 +10,8 @@
 				"price" : "12" ,
 				"rating" : 4 ,
 				"isAddedToCart" : false ,
-				"shipping" : 4
+				"shipping" : 4 ,
+				"manufacturer" : "MRF"
 			} ,
 				{
 				"id": 2,
@@ -23,7 +24,8 @@
 				"price" : "12" ,
 				"rating" : 4 ,
 				"isAddedToCart" : false,
-				"shipping" : 4
+				"shipping" : 4,
+					"manufacturer" : "JK"
 			},
 				{
 					"id": 3,
@@ -36,7 +38,8 @@
 				"price" : "12" ,
 				"rating" : 4 ,
 				"isAddedToCart" : false,
-				"shipping" : 4
+				"shipping" : 4,
+					"manufacturer" : "MRF"
 			},
 				{
 					"id": 4,
@@ -49,7 +52,8 @@
 				"price" : "12" ,
 				"rating" : 3 ,
 				"isAddedToCart" : false,
-				"shipping" : 4
+				"shipping" : 4,
+					"manufacturer" : "JK"
 			},
 				{
 					"id": 5,
@@ -61,7 +65,8 @@
 				"nameUrl" : "product-detail/5",
 				"price" : "12" ,
 				"rating" : 2 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+					"manufacturer" : "MRF"
 			},	{
 				"id": 6,
 				"description": "loremip sum" ,
@@ -72,7 +77,8 @@
 				"nameUrl" : "product-detail/6",
 				"price" : "12" ,
 				"rating" : 4 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"manufacturer" : "JK"
 			}
 			,	{
 				"id": 7,
@@ -84,7 +90,8 @@
 				"nameUrl" : "product-detail/7",
 				"price" : "12" ,
 				"rating" : 4 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"manufacturer" : "MRF"
 			},	{
 				"id": 8,
 				"description": "loremip sum" ,
@@ -95,7 +102,8 @@
 				"nameUrl" : "product-detail/8",
 				"price" : "12" ,
 				"rating" : 1 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+				"manufacturer" : "MRF"
 			},
 				{
 					"id": 9,
@@ -107,7 +115,8 @@
 				"nameUrl" : "product-detail/9",
 				"price" : "12" ,
 				"rating" : 5 ,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+					"manufacturer" : "JK"
 			},
 				{
 					"id": 10,
@@ -119,6 +128,7 @@
 				"nameUrl" : "product-detail/10",
 				"price" : "12",
 				"rating" : 0,
-				"isAddedToCart" : false
+				"isAddedToCart" : false,
+					"manufacturer" : "JK"
 			}]
 		}

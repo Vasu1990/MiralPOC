@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 
 class Filter extends Component {
+
+    filterByBrandHandler(brand) {
+
+    }
+
 	render () {
 	 	return (
 	 		<div className="sidebar shop-sidebar">
@@ -127,16 +132,16 @@ class Filter extends Component {
                                                     <div className="input-col-2">
                                                         <div className="input-rule check">
                                                             <span className="input-style"></span>
-                                                            <input id="swat" type="checkbox" name="manufacturer" value="swat"/>
+                                                            <input id="swat" type="checkbox" name="manufacturer" value="mrf" onClick={this.filterByBrandHandler('mrf')}/>
                                                         </div>
-                                                        <label className="filter-label" htmlFor="swat">Swat <span className="numofitems">(6)</span></label>
+                                                        <label className="filter-label" htmlFor="swat">MRF <span className="numofitems">(6)</span></label>
                                                     </div>
                                                     <div className="input-col-2">
                                                         <div className="input-rule check">
                                                             <span className="input-style"></span>
-                                                            <input id="hogama" type="checkbox" name="manufacturer" value="hogama"/>
+                                                            <input id="hogama" type="checkbox" name="manufacturer" value="jk" onClick={this.filterByBrandHandler('jk')}/>
                                                         </div>
-                                                        <label className="filter-label" htmlFor="hogama">Hogama <span className="numofitems">(8)</span></label>
+                                                        <label className="filter-label" htmlFor="hogama">JK <span className="numofitems">(8)</span></label>
                                                     </div>
                                                 </div>
                                             </div>

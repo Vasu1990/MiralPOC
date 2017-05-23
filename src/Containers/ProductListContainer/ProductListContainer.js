@@ -33,7 +33,7 @@ class ProductListContainer extends Component {
     return (
          <div className="page product-page">
          		 <Banner  pageTitle={this.title}/>
-         		 <ListWrapper removeFromCartHandler={this.removeFromCart.bind(this)} addToCartHandler={this.addToCart.bind(this)}  productListData={this.props.productData} listLoaded={this.props.productListLoaded}/> 
+         		 <ListWrapper removeFromCartHandler={this.removeFromCart.bind(this)} addToCartHandler={this.addToCart.bind(this)}  productListData={this.props.filterProductList} listLoaded={this.props.productListLoaded}/>
      	 </div>
 	    );
 	  }
@@ -42,7 +42,8 @@ class ProductListContainer extends Component {
   const mapStateToProps = (state) => {
      return {
         productData: state.productList.updateProductInList,
-        productListLoaded: state.productList.productListLoaded
+        productListLoaded: state.productList.productListLoaded ,
+        filterProductList: state.filterProductReducer.filterProducts
     };
   };
 
