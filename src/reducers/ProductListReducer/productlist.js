@@ -16,7 +16,7 @@ function updateProductInList(productList = [], action) {
 
       case REMOVE_FROM_LIST:
          productList.forEach(function(product) {
-            if(product.id == action.id) {
+            if(product.id === action.id) {
                product.isAddedToCart = false;
             }
          });

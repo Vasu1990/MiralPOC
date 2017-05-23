@@ -3,7 +3,7 @@ class CartUtil  {
             let totalAmount = 0;
 
             cartProducts.forEach(function(product) {
-                totalAmount +=  parseInt(product.price);
+                totalAmount +=  parseInt(product.price , 10);
             });
 
             totalAmount += shippingAmount ? shippingAmount :this.calculateShipping(cartProducts);
@@ -13,7 +13,7 @@ class CartUtil  {
             let totalAmount = 0;
 
             cartProducts.forEach(function (product) {
-                totalAmount = totalAmount + parseInt(product.shipping ? product.shipping : 0);
+                totalAmount += parseInt(product.shipping ? product.shipping : 0 , 10);
             });
 
             return totalAmount;

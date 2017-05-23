@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import productList from '../ProductListReducer/productlist';
-import checkoutProductReducer from '../CheckoutProductReducer/checkoutproduct';
+import checkoutProductReducer from '../CartReducer/cart';
 
 
 const mainReducer = combineReducers({productList:productList,checkoutProductList:checkoutProductReducer});

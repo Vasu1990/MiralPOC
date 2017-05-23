@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom'
 import './Header.css'
 import { connect } from 'react-redux';
-import * as checkoutActions from '../../../actions/cartactions';
 import CartUtil from '../../../Utils/CartUtil';
 import Cart from '../../Cart/Cart';
 

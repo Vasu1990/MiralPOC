@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_TO_CART,REMOVE_FROM_CART ,GET_CART_TOTAL } from '../../actions/cartactions'
+import { ADD_TO_CART,REMOVE_FROM_CART  } from '../../actions/cartactions'
 
 
 
@@ -13,7 +13,7 @@ function updateProductInCheckout(checkoutProductList = [], action) {
 
       case REMOVE_FROM_CART:
          checkoutProductList.forEach(function(product, index) {
-            if(product.id == action.id) {
+            if(product.id === action.id) {
                checkoutProductList.splice(index,1);
             }
          });
