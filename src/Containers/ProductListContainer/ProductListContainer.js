@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ListWrapper from '../../Components/ProductList/List/ListWrapper.js';
 import Banner from '../../Components/ReUsable/Banner/Banner.js';
 import {load,addToList,removeFromList} from '../../actions/productlistactions';
-import {addToCart,removeFromCart} from '../../actions/checkoutactions';
+import {addToCart,removeFromCart} from '../../actions/cartactions';
 
 
 class ProductListContainer extends Component {

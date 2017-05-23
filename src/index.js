@@ -15,7 +15,7 @@ import Footer from './Components/Layout/Footer/Footer.js'
 
 import ProductListContainer from './Containers/ProductListContainer/ProductListContainer.js'
 import HomeContainer from './Containers/HomeContainer/HomeContainer.js'
-import CheckoutContainer from './Containers/CheckoutContainer/CheckoutContainer.js'
+import CartContainer from './Containers/CartContainer/CartContainer.js'
 
 import productApp from './reducers/ContainerReducer/main';
 
@@ -25,14 +25,14 @@ const store = createStore(productApp, applyMiddleware(thunk));
 
 var app = document.getElementById('root');
 ReactDOM.render(
-	<Provider store = {store}>
+	<Provider store={store}>
 		<Router history={hashHistory}>
 			<div>
 			   <Header/>
 			   
 			   <Route exact path="/" component={HomeContainer}/>
 	       	   <Route path="/product-list" component={ProductListContainer}/>
-				<Route path="/checkout" component={CheckoutContainer}/>
+				<Route path="/view-cart" component={CartContainer}/>
 			   <Footer/>
 
 	           

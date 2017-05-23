@@ -3,9 +3,18 @@ import {
   Link
 } from 'react-router-dom'
 import './Header.css'
+import { connect } from 'react-redux';
+import * as checkoutActions from '../../../actions/cartactions';
+import CartUtil from '../../../Utils/CartUtil';
+import Cart from '../../Cart/Cart';
+
 
 class Header extends Component {
+
   render() {
+      this.totalShippingAmount = CartUtil.calculateShipping(this.props.cartData);
+      this.totalAmount = CartUtil.calculateTotal(this.props.cartData , this.totalShippingAmount);
+
     return (
       <div>
              <div className="header-area affix-top" data-spy="affix" data-offset-top="200">
@@ -14,9 +23,6 @@ class Header extends Component {
                         <div className="top-header-inner">
                             <div className="top-header-content">
                                 <div className="col-md-6 col-sm-12 col-xs-7">
-
-                               
-
 
                                 </div>
 
@@ -57,67 +63,11 @@ class Header extends Component {
 
                                 <div className="col-sm-4">
                                     <div className="block-minicart">
-                                        <a href="cart.html" className="cartlink"><i className="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span className="cart-subtotal"> (2) Items - <span className="cart-subtotal-price">$79.00</span></span>
-                                        </a>
+                                        <Link to="/view-cart">
+                                           <i className="fa fa-shopping-cart" aria-hidden="true"></i>My Cart<span className="cart-subtotal"> ({this.props.cartData.length}) Items - <span className="cart-subtotal-price">$ {this.totalAmount}</span></span>
+                                        </Link>
                                         <div className="on-minicart">
-                                            <dl className="cart-products">
-                                                <dt className="cart-product">
-                                                    <a className="cart-thumb" href="#">
-                                                        <img src="assets/img/product/cart-thumb-1.jpg" alt="Cart Thumb" />
-                                                    </a>
-                                                    <div className="cart-info">
-                                                        <div className="product-name">
-                                                            <span className="quantity-formated">
-                                                                <span className="quantity">1</span>x
-                                                                </span>
-                                                            <a href="#">Funnky hight</a>
-                                                        </div>
-                                                        <div className="product-attributes">
-                                                            <a href="#">S, Beige</a>
-                                                        </div>
-                                                        <span className="price">$50.99</span>
-                                                    </div>
-                                                    <span className="remove-link">
-                                                        <a href="#"><i className="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                    </span>
-                                                </dt>
-                                                <dd></dd>
-                                                <dt className="cart-product">
-                                                    <a className="cart-thumb" href="#">
-                                                        <img src="assets/img/product/cart-thumb-2.jpg" alt="Cart Thumb"/>
-                                                    </a>
-                                                    <div className="cart-info">
-                                                        <div className="product-name">
-                                                            <span className="quantity-formated">
-                                                                <span className="quantity">1</span>x
-                                                            </span>
-                                                            <a href="#">Funnky hight</a>
-                                                        </div>
-                                                        <div className="product-attributes">
-                                                            <a href="#">S, Beige</a>
-                                                        </div>
-                                                        <span className="price">$35</span>
-                                                    </div>
-                                                    <span className="remove-link">
-                                                        <a href="#"><i className="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                    </span>
-                                                </dt>
-                                                <dd></dd>
-                                            </dl>
-                                            <p className="cart-no-product">No products</p>
-                                            <div className="cart-prices">
-                                                <div className="cart-fee-wrap cart-shipping-fee">
-                                                    <span className="cart-text">Shipping</span>
-                                                    <span className="cart-fee price">$2.00</span>
-                                                </div>
-                                                <div className="cart-fee-wrap cart-total-fee">
-                                                    <span className="cart-text">Total</span>
-                                                    <span className="cart-fee price">$120.49</span>
-                                                </div>
-                                            </div>
-                                            <div className="cart-checkout">
-                                                <a href="#" className="btn checkout-btn">Check out<i className="fa fa-angle-right right"></i></a>
-                                            </div>
+                                           <Cart cartProducts={this.props.cartData} />
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +93,7 @@ class Header extends Component {
                                             <Link to="/product-list">Products</Link>
                                         </li>
                                         <li className="dropdown mega-holder">
-                                            <Link to="/checkout">Checkout</Link>
+                                            <Link to="/view-cart">View Cart</Link>
                                         </li>
                                         <li className="dropdown mega-holder">
                                             <a href="products.html" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lights</a>
@@ -236,4 +186,13 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        cartData :  state.checkoutProductList.updateProductInCheckout,
+        total : state.checkoutProductList.calculateCartTotal
+    }
+};
+
+
+// export default Header;
+export default connect(mapStateToProps)(Header);

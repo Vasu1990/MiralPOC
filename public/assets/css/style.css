@@ -2767,3 +2767,7 @@ Single Blog Page
 .checkout-page  .cart-thumb img{
     width: 120px;
 }
+
+.on-minicart .cart-thumb {
+    width: 130px;
+}

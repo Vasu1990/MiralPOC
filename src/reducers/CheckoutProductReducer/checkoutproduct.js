@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_TO_CART,REMOVE_FROM_CART } from '../../actions/checkoutactions'
+import { ADD_TO_CART,REMOVE_FROM_CART ,GET_CART_TOTAL } from '../../actions/cartactions'
 
 
 
@@ -20,15 +20,13 @@ function updateProductInCheckout(checkoutProductList = [], action) {
          return [
             ...checkoutProductList
          ];
-			
+
       default:
       return [...checkoutProductList];
    }
 }
 
-
-
-const checkOutProduct = combineReducers({updateProductInCheckout});
+const checkOutProduct = combineReducers({updateProductInCheckout });
 
 export default checkOutProduct;
 

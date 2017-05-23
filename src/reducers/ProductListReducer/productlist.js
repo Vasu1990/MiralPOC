@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { ADD_TO_LIST,REMOVE_TO_LIST,LOAD } from '../../actions/productlistactions'
+import { ADD_TO_LIST,REMOVE_FROM_LIST,LOAD } from '../../actions/productlistactions'
 
 function updateProductInList(productList = [], action) {
    switch (action.type) {
@@ -14,7 +14,7 @@ function updateProductInList(productList = [], action) {
             ...productList
          ];
 
-      case REMOVE_TO_LIST:
+      case REMOVE_FROM_LIST:
          productList.forEach(function(product) {
             if(product.id == action.id) {
                product.isAddedToCart = false;
