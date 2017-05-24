@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Banner from '../../Components/ReUsable/Banner/Banner.js';
-import axios from 'axios';
+// import axios from 'axios';
 
 class CheckoutContainer extends Component {
 
@@ -13,7 +13,7 @@ class CheckoutContainer extends Component {
      this.state = {
         cartProducts : [] ,
         carProductsLoaded : false
-      }
+      };
     this.title = "Checkout";
   }
 
