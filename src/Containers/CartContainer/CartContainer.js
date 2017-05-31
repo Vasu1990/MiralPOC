@@ -26,7 +26,7 @@ class CheckoutContainer extends Component {
             <div className="container">
               <div className="row">              
                   <div className="col-sm-12">
-
+                    <h1>Cart Listing</h1>
                       <dl className="cart-products">
                             {
                                 this.renderCartRows(this.props.cartProducts)
