@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class CheckoutContainer extends Component {
+
  renderCartRows = (cartProducts) => {
         return cartProducts.map((product ,index) => {
             console.log(product);
@@ -17,7 +18,7 @@ class CheckoutContainer extends Component {
                 </dt>
             );
         });
-    };
+ };
 
   render() {
 
