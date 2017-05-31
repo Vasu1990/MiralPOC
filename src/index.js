@@ -1,10 +1,11 @@
+//import these files from their respective folders
 import React from 'react'
 import ReactDOM from 'react-dom';
 import { createStore} from 'redux';
 import { Provider} from 'react-redux';
 import CartContainer from './Containers/CartContainer/CartContainer.js'
 import productApp from './reducers/ContainerReducer/main';
-
+import style from '../public/assets/css/style.css';
 
 //root is a static placeholder on the page
 // where the components should render dynamically
