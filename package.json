@@ -9,6 +9,7 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "expose-loader": "^0.7.3",
     "react-scripts": "0.9.5"
   },
   "scripts": {
