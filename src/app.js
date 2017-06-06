@@ -2,8 +2,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import style from '../public/assets/css/style.css';
+import SimpleComponent from './Components/SimpleComponent';
 import component1 from './Components/Cart/ReactComponent1';
 import component2 from './Components/Cart/ReactComponent2';
 
-var ServerComponents = {component1 , component2}
+var ServerComponents = {component1 , component2 , SimpleComponent}
 export  default ServerComponents;

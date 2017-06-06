@@ -14,9 +14,5 @@ const ReactComponent2 =
                 </Provider>
              
 
-ReactDOM.render(
-	ReactComponent2,
- document.getElementById('react-component2')); 
-
 export default ReactComponent2;
  
