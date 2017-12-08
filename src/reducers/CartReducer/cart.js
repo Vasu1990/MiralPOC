@@ -7,9 +7,8 @@ function updateProductInCheckout(checkoutProductList = [], action) {
    switch (action.type) {
 	
       case ADD_TO_CART:
-         return [
-            ...checkoutProductList,action.payload
-         ];
+      checkoutProductList = action.payload;
+         return checkoutProductList;
 
       case REMOVE_FROM_CART:
          checkoutProductList.forEach(function(product, index) {

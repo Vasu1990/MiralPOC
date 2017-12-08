@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {removeFromCart} from '../../actions/cartactions';
+import {addToCart,removeFromCart} from '../../actions/cartactions';
 import {removeFromList} from '../../actions/productlistactions';
 import CartUtil from '../../Utils/CartUtil';
 
@@ -14,6 +14,18 @@ class Cart extends Component {
                 {this.renderCart()}
             </div>
         );
+    }
+
+    componentWillReceiveProps (nextProps) {
+        let addedProducts = [];
+        for(let i = 0; i< nextProps.productList.length;i++) {
+            if(nextProps.productList[i].isAddedToCart) {
+                addedProducts.push(nextProps.productList[i]);
+            }
+        }
+        if(addedProducts.length != nextProps.cartProducts.length) {
+            this.props.dispatch(addToCart(addedProducts));
+        }
     }
 
     renderCart() {
@@ -86,7 +98,8 @@ class Cart extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        cartProducts: state.checkoutProductList.updateProductInCheckout
+        cartProducts: state.checkoutProductList.updateProductInCheckout,
+        productList: state.productList.updateProductInList
     };
 };
 

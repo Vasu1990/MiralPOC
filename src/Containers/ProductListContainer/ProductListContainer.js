@@ -11,13 +11,13 @@ class ProductListContainer extends Component {
   addToCart = (product , event) => {
   	event.preventDefault();
     this.props.dispatch(addToList(product.id));
-    this.props.dispatch(addToCart(product));
+    // this.props.dispatch(addToCart(product));
   };
 
    removeFromCart = (productId , event) => {
     event.preventDefault();
     this.props.dispatch(removeFromList(productId));
-    this.props.dispatch(removeFromCart(productId));
+    // this.props.dispatch(removeFromCart(productId));
   	
   };
 
